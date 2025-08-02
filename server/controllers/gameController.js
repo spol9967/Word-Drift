@@ -1,8 +1,26 @@
-const { calculateSimilarity } = require('../utils/similarity');
-const correctWord = 'banana'; // placeholder
+const words = require('../words.json');
+const { getSimilarity } = require('../utils/similarity');
 
-exports.checkWord = (req, res) => {
-  const guessedWord = req.body.word;
-  const score = calculateSimilarity(guessedWord, correctWord);
-  res.json({ score });
+let currentWordIndex = 0;
+
+exports.getWord = (req, res) => {
+  const word = words[currentWordIndex];
+  res.json({ word }); // frontend can hide or use it for debug
+  console.log(`Current word sent: ${word}`);
+};
+
+exports.submitGuess = (req, res) => {
+  const { guess } = req.body;
+  const correctWord = words[currentWordIndex];
+  const score = getSimilarity(guess, correctWord);
+  const response = {
+    correctWord,
+    guess,
+    score
+  };
+
+  currentWordIndex++;
+  if (currentWordIndex >= words.length) currentWordIndex = 0;
+
+  res.json(response);
 };

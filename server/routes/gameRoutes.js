@@ -1,8 +1,8 @@
 const express = require('express');
-const { checkWord } = require('../controllers/gameController');
-
 const router = express.Router();
+const { getWord, submitGuess } = require('../controllers/gameController');
 
-router.post('/guess', checkWord);
+router.get('/word', getWord);
+router.post('/guess', submitGuess);
 
 module.exports = router;
