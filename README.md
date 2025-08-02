@@ -4,6 +4,9 @@
 
 ---
 
+## [Play Word Drift](https://spol9967.github.io/Word-Drift/)
+
+
 ## 🚀 Features
 
 - 🎮 Interactive word guessing with similarity percentage feedback
