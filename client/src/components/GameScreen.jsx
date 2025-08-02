@@ -40,8 +40,6 @@ function GameScreen() {
     }
   };
 
-  const stage = dummyStages[currentStage];
-  if (!stage) return <div>🎉 Game Over! Thanks for playing.</div>;
   if (!wordData) return <div>Loading game...</div>;
 
   return (

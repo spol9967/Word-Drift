@@ -1,4 +1,5 @@
-.login {
+
+.signup-modal {
   max-width: 600px;
   margin: auto;
   padding: 30px;
@@ -15,20 +16,14 @@
   align-items: center;
 }
 
-.login h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #00e6ff;
-  text-shadow: 1px 1px #000;
+
+.signup-modal h2 {
+  margin-bottom: 10px;
 }
 
-.login p {
-  font-size: 1.1rem;
-  margin: 15px 0;
-}
-
-.loginBtns{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.signup-modal input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }

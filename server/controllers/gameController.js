@@ -19,7 +19,7 @@ exports.submitGuess = (req, res) => {
     score
   };
 
-  currentWordIndex++;
+  if(score ===100) {currentWordIndex++;}
   if (currentWordIndex >= words.length) currentWordIndex = 0;
 
   res.json(response);
