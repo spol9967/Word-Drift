@@ -9,6 +9,8 @@ const dummyStages = [
   { word: 'galaxy', guessed: 'galactic', score: 80 }
 ];
 
+const url = "https://word-drift.onrender.com";
+
 function GameScreen() {
   const [currentStage, setCurrentStage] = useState(0);
   const [guess, setGuess] = useState('');
@@ -21,7 +23,7 @@ function GameScreen() {
 
    const fetchWord = async () => {
     try {
-      const res = await axios.get('http://192.168.0.185:5000/api/game/word');
+      const res = await axios.get(url+'/api/game/word');
       setWordData(res.data);
       console.log('fetching word:', res.data);
     } catch (err) {
@@ -31,7 +33,7 @@ function GameScreen() {
 
    const submitGuess = async () => {
     try {
-      const res = await axios.post('http://192.168.0.185:5000/api/game/guess', { guess });
+      const res = await axios.post(url+'/api/game/guess', { guess });
       setLastResult(res.data);
       setGuess('');
       fetchWord(); // get next word after guess
