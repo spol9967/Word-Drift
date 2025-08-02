@@ -25,7 +25,7 @@
 Similarity is calculated using:
 - Levenshtein Distance
 - Jaccard Index (n-grams)
-- Semantic APIs (e.g., Datamuse, OpenAI)
+- Semantic APIs (e.g., Datamuse, OpenAI) Future Improvements
 
 ---
 
@@ -35,15 +35,9 @@ Similarity is calculated using:
 |--------------|------------------------|
 | Frontend     | React, HTML, CSS, JavaScript |
 | Backend      | Node.js, Express.js    |
-| Real-time    | Socket.io (optional multiplayer) |
+| Real-time    | Socket.io (optional multiplayer, Future Improvements) |
 | Scoring      | Custom string/NLP similarity logic |
-| Deployment   | Vercel / Netlify / Heroku / Render
-
----
-
-## 📁 Project Structure
-
-word-drift/ ├── client/ # React frontend │ ├── components/ # UI components │ └── pages/ # Game views ├── server/ # Node.js backend │ ├── routes/ # API endpoints │ └── logic/ # Word comparison logic ├── public/ # Static assets ├── .env # Environment variables └── README.md # Project docs
+| Deployment   | Render
 
 ---
 
